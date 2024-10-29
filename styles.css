@@ -834,20 +834,126 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: 1fr;
+    body {
+        padding-top: 50px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .navbar {
+        height: 50px; /* Altura reducida para móviles */
     }
 
+    .hero {
+        margin-top: -10px; /* Ajustado para móviles */
+        padding-top: 50px; /* Ajustado para móviles */
+    }
+    
     .hero h1 {
-        font-size: 2em;
+        font-size: 1.5em;
+        margin-bottom: 15px;
     }
-
+    
     .hero p {
-        font-size: 1em;
+        font-size: 0.8em;
+        margin-bottom: 30px;
+    }
+    
+    .hero2 h1 {
+        font-size: 1.0em;
+        margin-bottom: 20px;
+    }
+    
+    .hero2 p {
+        font-size: 0.8em;
+        margin-bottom: 30px;
     }
 
-    .cta-button {
-        padding: 8px 16px;
-        font-size: 0.9em;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--dark-background);
+        padding: 20px;
     }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .store-container {
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filter-toggle {
+        display: block;
+    }
+
+    .filters form {
+        display: none;
+    }
+
+    .filters form.active {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-images {
+        margin-bottom: 20px;
+    }
+
+    .product-info button {
+        width: 100%;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input[type="text"] {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .search-form button {
+        border-radius: 5px;
+    }
+
+    .coupon-form {
+        flex-direction: column;
+    }
+
+    .coupon-form input[type="text"] {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .coupon-form button {
+        border-radius: 5px;
+    }
+    
 }
