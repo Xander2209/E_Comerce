@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Digital - Detalles del Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Logo de la tienda" class="logo-image">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalog.html">Tienda</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="cart-icon desktop-cart">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="desktop-cart-counter" class="cart-counter">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>DETALLES DEL PRODUCTO</h1>
+        <div id="product-detail" class="product-detail">
+            <!-- Los detalles del producto se cargarán aquí dinámicamente -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Tienda Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Digital - Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Logo de la tienda" class="logo-image">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalog.html">Tienda</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="cart-icon desktop-cart">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="desktop-cart-counter" class="cart-counter">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Catálogo de Productos</h1>
+        
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div id="search-results" class="search-results"></div>
+
+        <div class="store-container">
+            <aside class="filters">
+                <button class="filter-toggle" aria-label="Mostrar filtros">
+                    Filtros <i class="fas fa-filter"></i>
+                </button>
+                <form id="filter-form">
+                    <div class="filter-section">
+                        <h3>Categorías</h3>
+                        <div id="category-filters">
+                            <!-- Las categorías se cargarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Precio</h3>
+                        <label for="min-price">Mínimo:</label>
+                        <input type="number" id="min-price" name="min-price" min="0">
+                        <label for="max-price">Máximo:</label>
+                        <input type="number" id="max-price" name="max-price" min="0">
+                    </div>
+                    <div class="filter-section">
+                        <h3>Disponibilidad</h3>
+                        <label>
+                            <input type="checkbox" id="in-stock" name="in-stock">
+                            En stock
+                        </label>
+                        <button type="submit">Aplicar Filtros</button>
+                    </div>
+                   
+                </form>
+            </aside>
+            <div class="product-display">
+                <div id="product-grid" class="product-grid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Tienda Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
