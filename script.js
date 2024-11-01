@@ -389,15 +389,6 @@ function removeFromCart(productId) {
     }
 }
 
-// Función para limpiar el carrito
-function clearCart() {
-    cart = [];
-    localStorage.removeItem('cart');
-    updateCart();
-    resetCartCounter(); // Añade esta línea
-    showNotification('El carrito ha sido limpiado.');
-}
-
 // Función para mostrar notificaciones
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
