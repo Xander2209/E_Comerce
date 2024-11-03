@@ -22,9 +22,6 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
@@ -32,11 +29,6 @@ body {
     padding-top: 60px;
 }
 
-/* Ajuste para el contenido principal */
-main {
-    padding: 20px;
-    flex: 1;
-}
 .container {
     width: 100%;
     max-width: 1200px;
@@ -117,6 +109,11 @@ main {
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 0.8em;
+}
+
+/* Ajuste para el contenido principal */
+main {
+    padding: 20px;
 }
 
 /* Estilos de la sección hero */
@@ -248,6 +245,7 @@ main {
 .filter-section button:hover{
     background-color: #920417;
 }
+
 
 /* Estilos de la cuadrícula de productos */
 .product-grid {
@@ -438,24 +436,26 @@ main {
 }
 
 .cart-item {
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    gap: 15px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
+
 .cart-item:last-child {
     border-bottom: none;
 }
 
 .cart-item img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .cart-item-info {
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
 }
 
 .cart-item-name {
@@ -484,36 +484,22 @@ main {
     margin: 0 10px;
 }
 
-/* Estilos para el resumen del carrito */
 .cart-summary {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
     margin-top: 20px;
-}
-
-.cart-summary h3 {
-    margin-top: 0;
-    color: var(--optional-color);
+    text-align: right;
 }
 
 .cart-summary p {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
-.cart-summary .total {
+.cart-total {
     font-weight: bold;
-    color: var(--optional-color1);
     font-size: 1.2em;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    margin-top: 10px;
+    color: var(--primary-color);
 }
 
-.checkout-button, .clear-cart-button {
+.checkout-button {
     background-color: var(--optional-color1);
     color: var(--light-text-color);
     border: none;
@@ -527,34 +513,6 @@ main {
 
 .checkout-button:hover {
     background-color: #920417;
-}
-
-.clear-cart-button:hover {
-    background-color: #920417;
-}
-
-/* Estilos para el formulario de cupón */
-.coupon-form {
-    display: 1;
-    margin: 0 0 0 800px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.coupon-form input[type="text"] {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-}
-
-.coupon-form button {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
 }
 
 /* Estilos del formulario de contacto */
@@ -698,7 +656,57 @@ footer {
     margin-top: 20px;
 }
 
+/* Estilos para el formulario de cupón */
+.coupon-form {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.coupon-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.coupon-form button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Estilos para el resumen del carrito */
+.cart-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+    color: var(--optional-color);
+}
+
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.cart-summary .total {
+    font-weight: bold;
+    color: var(--optional-color1);
+    font-size: 1.2em;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
